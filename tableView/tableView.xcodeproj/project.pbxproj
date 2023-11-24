@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		540370DE2B0E64F20008CD60 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540370DD2B0E64F20008CD60 /* TableViewController.swift */; };
 		54DCB3832B0D0555006C51A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DCB3822B0D0555006C51A0 /* AppDelegate.swift */; };
 		54DCB3852B0D0555006C51A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DCB3842B0D0555006C51A0 /* SceneDelegate.swift */; };
 		54DCB3872B0D0555006C51A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DCB3862B0D0555006C51A0 /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		540370DD2B0E64F20008CD60 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		54DCB37F2B0D0555006C51A0 /* tableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54DCB3822B0D0555006C51A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54DCB3842B0D0555006C51A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				54DCB3822B0D0555006C51A0 /* AppDelegate.swift */,
 				54DCB3842B0D0555006C51A0 /* SceneDelegate.swift */,
 				54DCB3862B0D0555006C51A0 /* ViewController.swift */,
+				540370DD2B0E64F20008CD60 /* TableViewController.swift */,
 				54DCB3882B0D0555006C51A0 /* Main.storyboard */,
 				54DCB38B2B0D0559006C51A0 /* Assets.xcassets */,
 				54DCB38D2B0D055A006C51A0 /* LaunchScreen.storyboard */,
@@ -191,7 +194,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1340;
-				LastUpgradeCheck = 1340;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					54DCB37E2B0D0555006C51A0 = {
 						CreatedOnToolsVersion = 13.4.1;
@@ -261,6 +264,7 @@
 				54DCB3872B0D0555006C51A0 /* ViewController.swift in Sources */,
 				54DCB3832B0D0555006C51A0 /* AppDelegate.swift in Sources */,
 				54DCB3852B0D0555006C51A0 /* SceneDelegate.swift in Sources */,
+				540370DE2B0E64F20008CD60 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +356,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -412,6 +417,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
