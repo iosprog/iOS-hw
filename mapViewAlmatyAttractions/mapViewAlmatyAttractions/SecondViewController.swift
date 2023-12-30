@@ -2,21 +2,26 @@
 //  ViewController.swift
 //  mapView
 //
-//  Created by РАХАТ  on 21.12.2023.
+//  Created by РАХАТ on 21.12.2023.
 //
 
 import UIKit
 import MapKit
 
-class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureRecognizerDelegate {
+class SecondViewController: UIViewController, CLLocationManagerDelegate, UIGestureRecognizerDelegate {
+    
+    @IBOutlet weak var zoomInButton: UIButton!
+    @IBOutlet weak var zoomOutButton: UIButton!
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var distanceLabel: UILabel!
     
     let locationManager = CLLocationManager()
     
     var userLocation = CLLocation()
     
     var followMe = false
+    
+    var fullInfo2 = info()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,16 +32,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureReco
         
         locationManager.startUpdatingLocation()
         
-        let mapDragRecognizer = UIPanGestureRecognizer(target: self, action:
-                                                        #selector(self.didDragMap))
-        
-        mapDragRecognizer.delegate = self
-        
-        mapView.addGestureRecognizer (mapDragRecognizer)
-        
-        
-        let lat:CLLocationDegrees = 37.957666//43.2374454
-        let long:CLLocationDegrees = -122.0323133//76.909891
+        let lat:CLLocationDegrees = fullInfo2.latForAtt
+        let long:CLLocationDegrees = fullInfo2.longForAtt
         
         // Создаем координта передавая долготу и широту
         let location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(lat, long)
@@ -48,60 +45,47 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureReco
         anotation.coordinate = location
         
         // Задаем название метке
-        anotation.title = "Title"
         
-        // Задаем описание метке
-        anotation.subtitle = "subtitle"
+        anotation.title = fullInfo2.textField
         
         // Добавляем метку на карту
         mapView.addAnnotation(anotation)
-        
-        // Настраиваем долгое нажатие - добавляем новые метки на
+    
+         //Настраиваем долгое нажатие - добавляем новые метки на
         let longPress = UILongPressGestureRecognizer(target: self, action:
                                                         #selector(self.longPressAction))
-        // минимально 2 секунды
-        longPress.minimumPressDuration = 2
+        longPress.minimumPressDuration = 0.5
         mapView.addGestureRecognizer(longPress)
-        // MKMapViewDelegate - чтоб отслеживать нажатие на метки на карте (метод didSelect)
         
-        //        mapView.delegate = self
     }
-    @IBAction func showMyLocation(_ sender: Any) {
-        followMe = true
+
+    @IBAction func zoomInButtonTapped(_ sender: UIButton) {
+        zoomMapView(zoomFactor: 4)
     }
-    
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations:[CLLocation]) {
-        userLocation = locations[0]
-        
-        print(userLocation)
-        
-        if followMe {
-            let latDelta:CLLocationDegrees = 0.01
-            let longDelta:CLLocationDegrees = 0.01
-            
-            let span = MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: longDelta)
-            // Создаем регион на карте с моими координатоми в центре
-            let region = MKCoordinateRegion(center: userLocation.coordinate, span: span)
-            // Приближаем карту с анимацией в данный регион
-            mapView.setRegion(region, animated: true)
-        }
+
+    @IBAction func zoomOutButtonTapped(_ sender: UIButton) {
+        zoomMapView(zoomFactor: 0.4)
     }
-    
-    @objc func didDragMap(gestureRecognizer: UIGestureRecognizer) {
-        // Как только начали двигать карту
-        if (gestureRecognizer.state == UIGestureRecognizer.State.began) {
-            // Говорим не следовать за пользователем
-            followMe = false
-            print("Map drag began")
-            // Когда закончили двигать карту
-            if (gestureRecognizer.state == UIGestureRecognizer.State.ended) {
-                print("Map drag ended" )
-            }
-        }
+
+    @objc func stepperValueChanged(_ stepper: UIStepper) {
+        zoomMapView(zoomFactor: stepper.value)
+    }
+
+    func zoomMapView(zoomFactor: Double) {
+        var region = mapView.region
+
+        // Ensure the span values are within a valid range
+        let minDelta: CLLocationDegrees = 0.0005
+        let maxDelta: CLLocationDegrees = 150.0
+        region.span.latitudeDelta /= zoomFactor
+        region.span.longitudeDelta /= zoomFactor
+        region.span.latitudeDelta = min(max(minDelta, region.span.latitudeDelta), maxDelta)
+        region.span.longitudeDelta = min(max(minDelta, region.span.longitudeDelta), maxDelta)
+
+        mapView.setRegion(region, animated: true)
     }
     
-    // Долгое нажатие на карту - добавляем новые метки
+     //Долгое нажатие на карту - добавляем новые метки
     @objc func longPressAction(gestureRecognizer: UIGestureRecognizer) {
         print ("gestureRecognizer")
         
@@ -123,12 +107,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureReco
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView)
     {
         print(view.annotation?.title!! as Any)
-        
-        // Получаем координаты метки
-        let location:CLLocation = CLLocation(latitude: (view.annotation?.coordinate.latitude)!,longitude: (view.annotation?.coordinate.longitude)!)
-        // Считаем растояние до метки от нашего пользователя
-        let meters:CLLocationDistance = location.distance(from: userLocation)
-        distanceLabel.text = String(format: "Distance: %.2f m", meters)
         
         // Routing - построение маршрута
         // 1 Координаты начальной точки А и точки В
