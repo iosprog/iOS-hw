@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 
-class SecondViewController: UIViewController, CLLocationManagerDelegate, UIGestureRecognizerDelegate {
+class SecondViewController: UIViewController, CLLocationManagerDelegate, UIGestureRecognizerDelegate, MKMapViewDelegate {
     
     @IBOutlet weak var zoomInButton: UIButton!
     @IBOutlet weak var zoomOutButton: UIButton!
@@ -18,17 +18,22 @@ class SecondViewController: UIViewController, CLLocationManagerDelegate, UIGestu
     
     var userLocation = CLLocation()
     
-    var followMe = false
-    
     var fullInfo2 = info()
     
+    var destinationCoordinate: CLLocationCoordinate2D!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        mapView.delegate = self
+
+        destination()
         
         locationManager.requestWhenInUseAuthorization()
         
         locationManager.delegate = self
+        
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
         
         locationManager.startUpdatingLocation()
         
@@ -38,6 +43,12 @@ class SecondViewController: UIViewController, CLLocationManagerDelegate, UIGestu
         // Создаем координта передавая долготу и широту
         let location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(lat, long)
         
+        let span = MKCoordinateSpan(latitudeDelta: 0.030, longitudeDelta: 0.030)
+               
+        let region = MKCoordinateRegion(center: location, span: span)
+               
+        mapView.setRegion(region, animated: true)
+        
         // Создаем метку на карте
         let anotation = MKPointAnnotation()
         
@@ -45,7 +56,6 @@ class SecondViewController: UIViewController, CLLocationManagerDelegate, UIGestu
         anotation.coordinate = location
         
         // Задаем название метке
-        
         anotation.title = fullInfo2.textField
         
         // Добавляем метку на карту
@@ -57,7 +67,18 @@ class SecondViewController: UIViewController, CLLocationManagerDelegate, UIGestu
         longPress.minimumPressDuration = 0.5
         mapView.addGestureRecognizer(longPress)
         
+        mapView.showsUserLocation = true
     }
+    
+    func destination() {
+
+        destinationCoordinate = CLLocationCoordinate2D(latitude: fullInfo2.latForAtt, longitude: fullInfo2.longForAtt)
+
+        addRouteToMap()
+        
+        }
+    
+    //Отдаление и приближение
 
     @IBAction func zoomInButtonTapped(_ sender: UIButton) {
         zoomMapView(zoomFactor: 4)
@@ -86,9 +107,8 @@ class SecondViewController: UIViewController, CLLocationManagerDelegate, UIGestu
     }
     
      //Долгое нажатие на карту - добавляем новые метки
+    
     @objc func longPressAction(gestureRecognizer: UIGestureRecognizer) {
-        print ("gestureRecognizer")
-        
         // Получаем точку нажатия на экране
         let touchPoint = gestureRecognizer.location(in: mapView)
         
@@ -98,16 +118,15 @@ class SecondViewController: UIViewController, CLLocationManagerDelegate, UIGestu
         // Создаем метку на карте
         let anotation = MKPointAnnotation()
         anotation.coordinate = newCoor
-        
-        anotation.title = "Title"
-        anotation.subtitle = "subtitle"
+//        
+//        anotation.title = "Title"
+//        anotation.subtitle = "subtitle"
         
         mapView.addAnnotation(anotation)
     }
+    
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView)
     {
-        print(view.annotation?.title!! as Any)
-        
         // Routing - построение маршрута
         // 1 Координаты начальной точки А и точки В
         let sourceLocation = CLLocationCoordinate2D(latitude: userLocation.coordinate.latitude, longitude: userLocation.coordinate.longitude)
@@ -157,17 +176,30 @@ class SecondViewController: UIViewController, CLLocationManagerDelegate, UIGestu
             self.mapView.setRegion(MKCoordinateRegion(rect), animated: true)
         }
     }
-    func mapViewl (_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-        
-        // Настраиваем линию
-        let renderer = MKPolylineRenderer(overlay: overlay)
-        
-        // Цвет красный
-        renderer.strokeColor = UIColor.blue
-        
-        // Ширина линии
-        renderer.lineWidth = 4.0
-        
-        return renderer
-    }
+    
+    func addRouteToMap() {
+            guard let userLocation = locationManager.location?.coordinate else {
+                // Handle the case where user location is not available
+                return
+            }
+
+            // Create a polyline with user's location and destination coordinates
+            let polyline = MKPolyline(coordinates: [userLocation, destinationCoordinate], count: 2)
+
+            // Add the polyline to the map
+            mapView.addOverlay(polyline)
+
+            // Adjust the map's region to fit the polyline
+            mapView.setVisibleMapRect(polyline.boundingMapRect, edgePadding: UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20), animated: true)
+        }
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+            if let polyline = overlay as? MKPolyline {
+                let renderer = MKPolylineRenderer(polyline: polyline)
+                renderer.strokeColor = UIColor.blue
+                renderer.lineWidth = 5
+                return renderer
+            }
+            return MKOverlayRenderer()
+        }
 }

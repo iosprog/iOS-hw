@@ -55,6 +55,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         // Создаем координта передавая долготу и широту
         let location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(lat, long)
         
+        let span = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
+               
+        let region = MKCoordinateRegion(center: location, span: span)
+               
+        mapView2.setRegion(region, animated: true)
+        
         // Создаем метку на карте
         let anotation = MKPointAnnotation()
         
