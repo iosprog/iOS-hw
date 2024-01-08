@@ -12,6 +12,8 @@ struct info
     var imageName = ""
     
     var textField = ""
+    
+    var timer = ""
 }
 
 
