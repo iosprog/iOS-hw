@@ -7,21 +7,17 @@
 
 import UIKit
 
-struct info
-{
+struct Info {
     var imageName = ""
-    
     var textField = ""
-    
-    var timer = ""
+	var date = Date()
 }
-
 
 class ViewController: UIViewController {
     @IBOutlet weak var labelText: UILabel!
     @IBOutlet weak var imageViewNews: UIImageView!
     
-    var fullInfo = info()
+    var fullInfo = Info()
     
     override func viewDidLoad() {
         super.viewDidLoad()

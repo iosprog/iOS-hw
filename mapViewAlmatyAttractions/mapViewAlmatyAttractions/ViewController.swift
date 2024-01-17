@@ -8,16 +8,6 @@
 import UIKit
 import MapKit
 
-struct info
-{
-    var imageName = ""
-    var textField = ""
-    var textInfo = ""
-    var latForAtt = 0.0
-    var longForAtt = 0.0
-}
-
-
 class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var labelText: UILabel!
     @IBOutlet weak var imageViewNews: UIImageView!
