@@ -6,24 +6,64 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
+import SVProgressHUD
 
 class TableViewController: UITableViewController {
+    
+    var arrayMovies: [Movies] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        searchMovie(term: "")
+    }
+    
+    func searchMovie(term: String)
+    {
+        let parameters = ["term": term, "limit": 25] as [String: Any]
+        
+        SVProgressHUD.show()
+        
+        AF.request ("https://demo1381890.mockable.io", method:
+                .get).responseData { response in
+                    
+                    var resultString = ""
+                    if let data = response.data {
+                        resultString = String(data: data, encoding: .utf8)!
+                        print(resultString)
+                        
+                        SVProgressHUD.dismiss()
+                        
+                        if response.response?.statusCode == 200 {
+                            let json = JSON(response.value!)
+                            print(json)
+                            if let resultArray = json.array
+                            {
+                                for item in resultArray {
+                                    let movieItem = Movies(json: item)
+                                    self.arrayMovies.append(movieItem)
+                                    
+                                }
+                                self.tableView.reloadData()
+                            }
+                        }
+                    }
+                }
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
