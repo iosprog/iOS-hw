@@ -1,0 +1,624 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		541E5C002B552DF300319B09 /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541E5BFF2B552DF300319B09 /* Information.swift */; };
+		549306192B370CC500A63217 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549306182B370CC500A63217 /* AppDelegate.swift */; };
+		5493061B2B370CC500A63217 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5493061A2B370CC500A63217 /* SceneDelegate.swift */; };
+		5493061D2B370CC500A63217 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5493061C2B370CC500A63217 /* ViewController.swift */; };
+		549306202B370CC500A63217 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5493061E2B370CC500A63217 /* Main.storyboard */; };
+		549306222B370CC600A63217 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 549306212B370CC600A63217 /* Assets.xcassets */; };
+		549306252B370CC600A63217 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 549306232B370CC600A63217 /* LaunchScreen.storyboard */; };
+		549306302B370CC700A63217 /* mapViewAlmatyAttractionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5493062F2B370CC700A63217 /* mapViewAlmatyAttractionsTests.swift */; };
+		5493063A2B370CC700A63217 /* mapViewAlmatyAttractionsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549306392B370CC700A63217 /* mapViewAlmatyAttractionsUITests.swift */; };
+		5493063C2B370CC700A63217 /* mapViewAlmatyAttractionsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5493063B2B370CC700A63217 /* mapViewAlmatyAttractionsUITestsLaunchTests.swift */; };
+		549306492B370DF700A63217 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549306482B370DF700A63217 /* TableViewController.swift */; };
+		54EEDCE12B3B56E50024D211 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EEDCE02B3B56E50024D211 /* SecondViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5493062C2B370CC700A63217 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5493060D2B370CC500A63217 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 549306142B370CC500A63217;
+			remoteInfo = mapViewAlmatyAttractions;
+		};
+		549306362B370CC700A63217 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5493060D2B370CC500A63217 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 549306142B370CC500A63217;
+			remoteInfo = mapViewAlmatyAttractions;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		541E5BFF2B552DF300319B09 /* Information.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
+		549306152B370CC500A63217 /* mapViewAlmatyAttractions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mapViewAlmatyAttractions.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		549306182B370CC500A63217 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5493061A2B370CC500A63217 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5493061C2B370CC500A63217 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5493061F2B370CC500A63217 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		549306212B370CC600A63217 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		549306242B370CC600A63217 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		549306262B370CC600A63217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5493062B2B370CC700A63217 /* mapViewAlmatyAttractionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mapViewAlmatyAttractionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5493062F2B370CC700A63217 /* mapViewAlmatyAttractionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapViewAlmatyAttractionsTests.swift; sourceTree = "<group>"; };
+		549306352B370CC700A63217 /* mapViewAlmatyAttractionsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mapViewAlmatyAttractionsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		549306392B370CC700A63217 /* mapViewAlmatyAttractionsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapViewAlmatyAttractionsUITests.swift; sourceTree = "<group>"; };
+		5493063B2B370CC700A63217 /* mapViewAlmatyAttractionsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapViewAlmatyAttractionsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		549306482B370DF700A63217 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		54EEDCE02B3B56E50024D211 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		549306122B370CC500A63217 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		549306282B370CC700A63217 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		549306322B370CC700A63217 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5493060C2B370CC500A63217 = {
+			isa = PBXGroup;
+			children = (
+				549306172B370CC500A63217 /* mapViewAlmatyAttractions */,
+				5493062E2B370CC700A63217 /* mapViewAlmatyAttractionsTests */,
+				549306382B370CC700A63217 /* mapViewAlmatyAttractionsUITests */,
+				549306162B370CC500A63217 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		549306162B370CC500A63217 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				549306152B370CC500A63217 /* mapViewAlmatyAttractions.app */,
+				5493062B2B370CC700A63217 /* mapViewAlmatyAttractionsTests.xctest */,
+				549306352B370CC700A63217 /* mapViewAlmatyAttractionsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		549306172B370CC500A63217 /* mapViewAlmatyAttractions */ = {
+			isa = PBXGroup;
+			children = (
+				549306182B370CC500A63217 /* AppDelegate.swift */,
+				5493061A2B370CC500A63217 /* SceneDelegate.swift */,
+				5493061C2B370CC500A63217 /* ViewController.swift */,
+				541E5BFF2B552DF300319B09 /* Information.swift */,
+				549306482B370DF700A63217 /* TableViewController.swift */,
+				5493061E2B370CC500A63217 /* Main.storyboard */,
+				54EEDCE02B3B56E50024D211 /* SecondViewController.swift */,
+				549306212B370CC600A63217 /* Assets.xcassets */,
+				549306232B370CC600A63217 /* LaunchScreen.storyboard */,
+				549306262B370CC600A63217 /* Info.plist */,
+			);
+			path = mapViewAlmatyAttractions;
+			sourceTree = "<group>";
+		};
+		5493062E2B370CC700A63217 /* mapViewAlmatyAttractionsTests */ = {
+			isa = PBXGroup;
+			children = (
+				5493062F2B370CC700A63217 /* mapViewAlmatyAttractionsTests.swift */,
+			);
+			path = mapViewAlmatyAttractionsTests;
+			sourceTree = "<group>";
+		};
+		549306382B370CC700A63217 /* mapViewAlmatyAttractionsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				549306392B370CC700A63217 /* mapViewAlmatyAttractionsUITests.swift */,
+				5493063B2B370CC700A63217 /* mapViewAlmatyAttractionsUITestsLaunchTests.swift */,
+			);
+			path = mapViewAlmatyAttractionsUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		549306142B370CC500A63217 /* mapViewAlmatyAttractions */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5493063F2B370CC700A63217 /* Build configuration list for PBXNativeTarget "mapViewAlmatyAttractions" */;
+			buildPhases = (
+				549306112B370CC500A63217 /* Sources */,
+				549306122B370CC500A63217 /* Frameworks */,
+				549306132B370CC500A63217 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = mapViewAlmatyAttractions;
+			productName = mapViewAlmatyAttractions;
+			productReference = 549306152B370CC500A63217 /* mapViewAlmatyAttractions.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5493062A2B370CC700A63217 /* mapViewAlmatyAttractionsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 549306422B370CC700A63217 /* Build configuration list for PBXNativeTarget "mapViewAlmatyAttractionsTests" */;
+			buildPhases = (
+				549306272B370CC700A63217 /* Sources */,
+				549306282B370CC700A63217 /* Frameworks */,
+				549306292B370CC700A63217 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5493062D2B370CC700A63217 /* PBXTargetDependency */,
+			);
+			name = mapViewAlmatyAttractionsTests;
+			productName = mapViewAlmatyAttractionsTests;
+			productReference = 5493062B2B370CC700A63217 /* mapViewAlmatyAttractionsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		549306342B370CC700A63217 /* mapViewAlmatyAttractionsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 549306452B370CC700A63217 /* Build configuration list for PBXNativeTarget "mapViewAlmatyAttractionsUITests" */;
+			buildPhases = (
+				549306312B370CC700A63217 /* Sources */,
+				549306322B370CC700A63217 /* Frameworks */,
+				549306332B370CC700A63217 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				549306372B370CC700A63217 /* PBXTargetDependency */,
+			);
+			name = mapViewAlmatyAttractionsUITests;
+			productName = mapViewAlmatyAttractionsUITests;
+			productReference = 549306352B370CC700A63217 /* mapViewAlmatyAttractionsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5493060D2B370CC500A63217 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					549306142B370CC500A63217 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					5493062A2B370CC700A63217 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 549306142B370CC500A63217;
+					};
+					549306342B370CC700A63217 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 549306142B370CC500A63217;
+					};
+				};
+			};
+			buildConfigurationList = 549306102B370CC500A63217 /* Build configuration list for PBXProject "mapViewAlmatyAttractions" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5493060C2B370CC500A63217;
+			productRefGroup = 549306162B370CC500A63217 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				549306142B370CC500A63217 /* mapViewAlmatyAttractions */,
+				5493062A2B370CC700A63217 /* mapViewAlmatyAttractionsTests */,
+				549306342B370CC700A63217 /* mapViewAlmatyAttractionsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		549306132B370CC500A63217 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				549306252B370CC600A63217 /* LaunchScreen.storyboard in Resources */,
+				549306222B370CC600A63217 /* Assets.xcassets in Resources */,
+				549306202B370CC500A63217 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		549306292B370CC700A63217 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		549306332B370CC700A63217 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		549306112B370CC500A63217 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				541E5C002B552DF300319B09 /* Information.swift in Sources */,
+				5493061D2B370CC500A63217 /* ViewController.swift in Sources */,
+				549306192B370CC500A63217 /* AppDelegate.swift in Sources */,
+				5493061B2B370CC500A63217 /* SceneDelegate.swift in Sources */,
+				54EEDCE12B3B56E50024D211 /* SecondViewController.swift in Sources */,
+				549306492B370DF700A63217 /* TableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		549306272B370CC700A63217 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				549306302B370CC700A63217 /* mapViewAlmatyAttractionsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		549306312B370CC700A63217 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5493063A2B370CC700A63217 /* mapViewAlmatyAttractionsUITests.swift in Sources */,
+				5493063C2B370CC700A63217 /* mapViewAlmatyAttractionsUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5493062D2B370CC700A63217 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 549306142B370CC500A63217 /* mapViewAlmatyAttractions */;
+			targetProxy = 5493062C2B370CC700A63217 /* PBXContainerItemProxy */;
+		};
+		549306372B370CC700A63217 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 549306142B370CC500A63217 /* mapViewAlmatyAttractions */;
+			targetProxy = 549306362B370CC700A63217 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5493061E2B370CC500A63217 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5493061F2B370CC500A63217 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		549306232B370CC600A63217 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				549306242B370CC600A63217 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5493063D2B370CC700A63217 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5493063E2B370CC700A63217 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		549306402B370CC700A63217 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VD29Z2QXJU;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = mapViewAlmatyAttractions/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allow your location ";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.1App.AlmatyAttractions.mapViewAlmatyAttractions;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		549306412B370CC700A63217 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VD29Z2QXJU;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = mapViewAlmatyAttractions/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allow your location ";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.1App.AlmatyAttractions.mapViewAlmatyAttractions;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		549306432B370CC700A63217 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.1App.AlmatyAttractions.mapViewAlmatyAttractionsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mapViewAlmatyAttractions.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/mapViewAlmatyAttractions";
+			};
+			name = Debug;
+		};
+		549306442B370CC700A63217 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.1App.AlmatyAttractions.mapViewAlmatyAttractionsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mapViewAlmatyAttractions.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/mapViewAlmatyAttractions";
+			};
+			name = Release;
+		};
+		549306462B370CC700A63217 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.1App.AlmatyAttractions.mapViewAlmatyAttractionsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = mapViewAlmatyAttractions;
+			};
+			name = Debug;
+		};
+		549306472B370CC700A63217 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.1App.AlmatyAttractions.mapViewAlmatyAttractionsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = mapViewAlmatyAttractions;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		549306102B370CC500A63217 /* Build configuration list for PBXProject "mapViewAlmatyAttractions" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5493063D2B370CC700A63217 /* Debug */,
+				5493063E2B370CC700A63217 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5493063F2B370CC700A63217 /* Build configuration list for PBXNativeTarget "mapViewAlmatyAttractions" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				549306402B370CC700A63217 /* Debug */,
+				549306412B370CC700A63217 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		549306422B370CC700A63217 /* Build configuration list for PBXNativeTarget "mapViewAlmatyAttractionsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				549306432B370CC700A63217 /* Debug */,
+				549306442B370CC700A63217 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		549306452B370CC700A63217 /* Build configuration list for PBXNativeTarget "mapViewAlmatyAttractionsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				549306462B370CC700A63217 /* Debug */,
+				549306472B370CC700A63217 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5493060D2B370CC500A63217 /* Project object */;
+}
