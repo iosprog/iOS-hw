@@ -6,12 +6,11 @@ target 'WorldWonders' do
   use_frameworks!
 
   # Pods for WorldWonders
-
   pod 'Alamofire'
   pod 'SwiftyJSON'
   pod 'SVProgressHUD'
   pod 'SDWebImage'
-  
+
   target 'WorldWondersTests' do
     inherit! :search_paths
     # Pods for testing

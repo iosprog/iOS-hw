@@ -173,8 +173,9 @@
 				EA54BA702AE40C90FBF6F152 /* Pods-WorldWondersTests.debug.xcconfig */,
 				3010E7F0B1808983BE95C86A /* Pods-WorldWondersTests.release.xcconfig */,
 			);
-			path = Pods;
-			sourceTree = "<group>";
+			name = Pods;
+			path = "/Users/mehsofticloud.com/Desktop/iOS-hw/WorldWonders/Pods";
+			sourceTree = "<absolute>";
 		};
 /* End PBXGroup section */
 
@@ -187,7 +188,7 @@
 				549DC1342B4D8A5900543DAD /* Sources */,
 				549DC1352B4D8A5900543DAD /* Frameworks */,
 				549DC1362B4D8A5900543DAD /* Resources */,
-				0E1298E5750AF67C0CF49193 /* [CP] Embed Pods Frameworks */,
+				2FB4F61F7C179F77294933FC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -225,7 +226,7 @@
 				549DC1542B4D8A5B00543DAD /* Sources */,
 				549DC1552B4D8A5B00543DAD /* Frameworks */,
 				549DC1562B4D8A5B00543DAD /* Resources */,
-				292A33EA4A7833A5F3AC4AC1 /* [CP] Embed Pods Frameworks */,
+				9C442BC005AD59D9ACE989DC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -308,7 +309,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0E1298E5750AF67C0CF49193 /* [CP] Embed Pods Frameworks */ = {
+		2FB4F61F7C179F77294933FC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -325,7 +326,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WorldWonders/Pods-WorldWonders-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		292A33EA4A7833A5F3AC4AC1 /* [CP] Embed Pods Frameworks */ = {
+		9C442BC005AD59D9ACE989DC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
